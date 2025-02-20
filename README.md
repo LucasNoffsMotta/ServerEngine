@@ -25,21 +25,9 @@ Manipulação de Threads para conexões simultâneas
 
 🏗 Estrutura do Projeto
 
-/ServerEngine
-  |-- /Engine
-      |-- ServeHtml.cs  # Lida com a resposta de requisições HTTP e rotas
-      |-- Messages.cs   # Gera cabeçalhos HTTP personalizados
-      |-- Translate.cs  # Converte as respostas do servidor e envia via socket
-  |-- /Application
-      |-- /html
-          |-- mainPage.html
-          |-- formResponse.html
-      |-- /css
-          |-- style.css
-          |-- formResponse.css
-  |-- Program.cs        # Inicializa o servidor
+![image](https://github.com/user-attachments/assets/5999d51d-bdb5-446b-a336-1969a3b6dc77)
 
-🚀 Como Executar
+Como Executar
 
 📌 Clonando o repositório
 
