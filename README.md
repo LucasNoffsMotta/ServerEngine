@@ -25,22 +25,9 @@ Manipulação de Threads para conexões simultâneas
 
 🏗 Estrutura do Projeto
 
-/ServerEngine
-  |-- /Engine
-      |-- Connection.cs  # Inicializa o servidor, configura e gerencia as conexoes que chegam
-      |-- Worker.cs  # Objeto que capta uma nova conexao e gerencia o recebimento de solicitacoes em uma nova thread
-      |-- Map.cs  # Mapeia toda a solicitacao do cliente dentro de cada Worker
-      |-- ServeWebPages.cs  # Lida com a resposta de requisições HTTP
-      |-- Messages.cs   # Gera cabeçalhos HTTP personalizados
-      |-- Translate.cs  # Envia a resposta do servidor via socket
-  |-- /Application
-      |-- /html
-          |-- mainPage.html
-          |-- formResponse.html
-      |-- /css
-          |-- style.css
-          |-- formResponse.css
-  |-- Program.cs        # Inicializa o servidor
+
+![image](https://github.com/user-attachments/assets/765bea30-ee7d-47f6-91fd-63375d38b2f6)
+
 
 Como Executar
 
