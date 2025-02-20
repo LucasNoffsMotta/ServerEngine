@@ -1,0 +1,108 @@
+﻿/* Estilização do h1 */
+h1 {
+    text-align: center;
+    color: #003366; /* Cor azul mais suave */
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 60px;
+    font-family: 'Didot', Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 51, 102, 0.7); /* Sombra suave */
+    margin-top: 20px;
+}
+
+/* Estilização de links */
+a {
+    text-decoration: none;
+    color: #0066cc; /* Cor azul vibrante */
+    transition: color 0.3s ease-in-out; /* Efeito suave ao passar o mouse */
+}
+
+    a:hover {
+        color: #ff6600; /* Cor alaranjada no hover */
+    }
+
+/* Estilização do body */
+body {
+    background-color: #f4f4f4; /* Fundo mais suave */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Cor do texto mais suave */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilização do label */
+label {
+    color: white;
+    background-color: #003366;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Estilização do h2 */
+h2 {
+    color: #003366; /* Azul mais suave */
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilização do parágrafo */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+
+/* Estilização do botão */
+button {
+    background-color: #9ade7a;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    button:hover {
+        background-color: #8bc34a; /* Cor mais forte ao passar o mouse */
+        transform: translateY(-2px); /* Efeito de leve levantamento */
+    }
+
+    button:active {
+        transform: translateY(1px); /* Efeito de pressionar o botão */
+    }
+
+/* Estilização de elementos em formulário */
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+    /* Estilização de campos de input ao focar */
+    input:focus, textarea:focus {
+        border-color: #003366;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 51, 102, 0.6);
+    }

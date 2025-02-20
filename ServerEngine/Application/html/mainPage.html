@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon Registration</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Race Registration!</h1>
+    </header>
+    <section>
+        <form action="http://localhost:8800/race" method="POST">
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <br>
+            <section>
+                <a href="sdsasdsa">Link reference</a>
+                <p>Select a race:</p>
+                <input type="radio" name="race" id="fun" value="fun" required>
+                <label for="fun">Fun Run St</label>
+                <br>
+                <input type="radio" name="race" id="half" value="half" required>
+                <label for="half">Half Marathon</label>
+                <br>
+                <input type="radio" name="race" id="full" value="full" required>
+                <label for="full">Full Marathon</label>
+            </section>
+
+            <section>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" minlength="7" maxlength="13" required>
+
+                <br>
+                <label for="age">Select Age Group</label>
+                <select required name="age">
+                    <option value="under" selected>Under 18</option>
+                    <option value="18">18-30</option>
+                    <option value="30">30-50</option>
+                    <option value="50+">50+</option>
+                </select>
+                <br>
+
+                <button type="submit">Register</button>
+            </section>
+        </form>
+    </section>
+</body>
+</html>
