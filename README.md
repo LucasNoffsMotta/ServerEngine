@@ -33,8 +33,8 @@ Como Executar
 
 📌 Clonando o repositório
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/LucasNoffsMotta/ServerEngine.git
+cd ServerEngine
 
 📡 Executando o Servidor
 
@@ -44,11 +44,11 @@ Compile e execute o Servidor
 
 O servidor iniciará e ficará aguardando conexões
 
-🔗 Testando com o Cliente (via cURL)
+🔗 Testando com o Cliente (via cURL ou Navegador)
 
-curl -X GET http://localhost:porta/
+curl -X GET http://localhost:8800/
 
-curl -X POST http://localhost:porta/race -d "firstname=John&lastname=Doe"
+curl -X POST http://localhost:8800/race -d "firstname=John&lastname=Doe"
 
 🛠 Melhorias Futuras
 
