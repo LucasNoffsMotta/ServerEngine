@@ -28,7 +28,7 @@
             File.WriteAllText(path, html);
         }
 
-        public static string GetInfoString(string request)
+        public static string GetInfoStringFromRawClientResponse(string request)
         {
             string[] splitedRequest = request.Split('\n');
 
@@ -39,49 +39,47 @@
                     return s;
                 }
             }
-
             return "none";
         }
 
-        public static Dictionary<string, string> GetParsedInfo(string request)
+        public static Dictionary<string, string> GetFinalParsedInfo(string infoString)
         {
-            string[] subStrings = request.Split('&');
+            string[] subStrings = infoString.Split('&');
             Dictionary<string, string> userInfo = new Dictionary<string, string>();
 
             foreach (string s in subStrings)
             {
                 if (s.StartsWith("firstname"))
                 {
-                    userInfo["firstname"] = GetUserInfo(s);
+                    userInfo["firstname"] = GetUserInfoFromSubString(s);
                 }
 
                 else if (s.StartsWith("lastname"))
                 {
-                    userInfo["lastname"] = GetUserInfo(s);
+                    userInfo["lastname"] = GetUserInfoFromSubString(s);
                 }
 
                 else if (s.StartsWith("race"))
                 {
-                    userInfo["race"] = GetUserInfo(s);
+                    userInfo["race"] = GetUserInfoFromSubString(s);
                 }
 
                 else if (s.StartsWith("email"))
                 {
-                    string rawEmail = GetUserInfo(s);
+                    string rawEmail = GetUserInfoFromSubString(s);
                     userInfo["email"] = ParseEmail(rawEmail);
                 }
 
                 else if (s.StartsWith("password"))
                 {
-                    userInfo["password"] = GetUserInfo(s);
+                    userInfo["password"] = GetUserInfoFromSubString(s);
                 }
 
                 else if (s.StartsWith("age"))
                 {
-                    userInfo["age"] = GetUserInfo(s);
+                    userInfo["age"] = GetUserInfoFromSubString(s);
                 }
             }
-
             return userInfo;
         }
 
@@ -101,7 +99,7 @@
             return emailBody[0] + '@' + emailDomain;
         }
 
-        public static string GetUserInfo(string infoSubString)
+        public static string GetUserInfoFromSubString(string infoSubString)
         {
             string info = "";
 
@@ -111,7 +109,6 @@
             {
                 info += infoSubString[i];
             }
-
             return info;
         }
     }

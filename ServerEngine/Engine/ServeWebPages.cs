@@ -68,8 +68,8 @@ namespace ServerEngine.Engine
 
             else if (type.Equals("POST"))
             {
-                string infoString = GetPostContent.GetInfoString(clientResponse);
-                Dictionary<string, string> userInfo = GetPostContent.GetParsedInfo(infoString);
+                string infoString = GetPostContent.GetInfoStringFromRawClientResponse(clientResponse);
+                Dictionary<string, string> userInfo = GetPostContent.GetFinalParsedInfo(infoString);
                 GetPostContent.CreateFormReponseHTML(userInfo["firstname"] + " " + userInfo["lastname"], userInfo["email"]);
                 generatedFile = File.ReadAllText(htmlFormResponsePath);
                 serverResponse = Messages.GenerateHtmlResponseToHttp(generatedFile) + generatedFile;
