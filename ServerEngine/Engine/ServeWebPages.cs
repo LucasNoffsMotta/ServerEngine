@@ -1,4 +1,5 @@
-﻿using System.Net.Sockets;
+﻿using ServerEngine.Application;
+using System.Net.Sockets;
 
 
 namespace ServerEngine.Engine
@@ -13,7 +14,7 @@ namespace ServerEngine.Engine
 
 
 
-        public static void SendHttp(Socket handler, string type, string route)
+        public static void SendHttp(Socket handler, string clientResponse, string type, string route)
         {
             string serverResponse = "";
             string generatedFile = "";
@@ -67,10 +68,13 @@ namespace ServerEngine.Engine
 
             else if (type.Equals("POST"))
             {
-                    generatedFile = File.ReadAllText(htmlFormResponsePath);
-                    serverResponse = Messages.GenerateHtmlResponseToHttp(generatedFile) + generatedFile;
-                    Translate.SendMessage(handler, serverResponse);
-                    serverResponded = true;
+                string infoString = GetPostContent.GetInfoString(clientResponse);
+                Dictionary<string, string> userInfo = GetPostContent.GetParsedInfo(infoString);
+                GetPostContent.CreateFormReponseHTML(userInfo["firstname"] + " " + userInfo["lastname"], userInfo["email"]);
+                generatedFile = File.ReadAllText(htmlFormResponsePath);
+                serverResponse = Messages.GenerateHtmlResponseToHttp(generatedFile) + generatedFile;
+                Translate.SendMessage(handler, serverResponse);
+                serverResponded = true;
             }
 
 

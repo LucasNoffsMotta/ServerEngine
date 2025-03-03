@@ -14,7 +14,7 @@ namespace ServerEngine.Engine
             string request = Translate.ReceiveMessage(handler);
             string type = GetType(request);
             string route = Routes.GetRoute(request);
-            ServeWebPages.SendHttp(handler, type, route);
+            ServeWebPages.SendHttp(handler, request, type, route);
         }
 
         public static string GetType(string request)

@@ -39,7 +39,6 @@ namespace ServerEngine.Engine
         {
             try
             {
-                listener = new(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 listener.Bind(endPoint);
                 listener.Listen(10);
                 Console.WriteLine($"URL: {httpAdress}");
@@ -107,12 +106,17 @@ namespace ServerEngine.Engine
 
         public void ConnectionLoop()
         {
+
+            //while(true)
+            //{
+            //    Data.ShowMenu(handler);
+            //}
+
             //LOCAL APLICATION TEST
-            //Data.ShowMenu(handler);
-            
-            //HTTP Server Aplication test
             StartConnection();
             WaitConnection();
+            //HTTP Server Aplication test
+
         }
     }
 }
