@@ -2,7 +2,7 @@
 
 Projeto: Servidor e Cliente via Sockets
 
-📌 Descrição
+Descrição
 
 Este projeto implementa um servidor utilizando sockets para comunicação entre processos. Ele foi desenvolvido com o objetivo de aprofundar conhecimentos sobre redes, protocolo HTTP e manipulação de requisições.
 
