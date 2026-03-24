@@ -18,10 +18,10 @@ Manipulação de Threads para conexões simultâneas
 
 ⚙️ Funcionalidades
 
-Servidor capaz de processar requisições HTTP GET e POST
-Serviço de entrega de arquivos HTML e CSS
-Processamento de múltiplas conexões via threads
-Log de requisições e respostas no console
+<li>Servidor capaz de processar requisições HTTP GET e POST<li>
+<li>Serviço de entrega de arquivos HTML e CSS<li>
+<li>Processamento de múltiplas conexões via threads<li>
+<li>Log de requisições e respostas no console<li>
 
 Estrutura do Projeto
 
